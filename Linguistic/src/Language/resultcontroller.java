@@ -6,13 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-<<<<<<< HEAD
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressIndicator;
-import javafx.stage.Stage;
-import java.io.IOException;
-=======
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -25,7 +18,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
->>>>>>> savin
 
 	public class resultcontroller {
 		
@@ -33,25 +25,12 @@ import java.sql.SQLException;
 		private Scene scene;
 
 	    @FXML
-<<<<<<< HEAD
-	    public Label remark, marks, markstext, correcttext, wrongtext;
-=======
 	    public Label remarklabel, marks, markstext, correcttext, wrongtext;
->>>>>>> savin
 	    
 	    @FXML
 	    public Button Back;
 	    @FXML
 	    public ProgressIndicator correct_progress, wrong_progress;
-<<<<<<< HEAD
-
-	    int correct;
-	    int wrong;
-	    
-	    @FXML
-	    void QLpage(ActionEvent event) throws IOException{
-	    	Parent root = FXMLLoader.load(getClass().getResource("QLpage.fxml"));
-=======
 	    @FXML
 	    public TextField username;
 	    
@@ -64,16 +43,12 @@ import java.sql.SQLException;
 	    @FXML
 	    void QLpage(ActionEvent event) throws IOException{
 	    	Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
->>>>>>> savin
 	        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 	        scene = new Scene(root);
 	        stage.setScene(scene);
 	        stage.show();
-<<<<<<< HEAD
-=======
 	        progress1 += 0.5;
 	        progress2 += 1.0;
->>>>>>> savin
 	    }
 	    @FXML
 	    private void initialize() {
@@ -94,19 +69,6 @@ import java.sql.SQLException;
 	        markstext.setText(correct + " Marks Scored");
 
 	        if (correct<2) {
-<<<<<<< HEAD
-	            remark.setText("Oh no..! You have failed the quiz. Failure is a stepping stone to success. Use this experience as a valuable lesson to improve and do better next time.. Practice daily!.");
-	        } else if (correct>=2 && correct<5) {
-	            remark.setText("Oops..! You have scored less marks. You are capable of great things, and this setback is just a small part of your journey. Keep pushing forward.");
-	        } else if (correct>=5 && correct<=7) {
-	            remark.setText("Good. Perseverance is key. Use this as an opportunity to learn, grow, and come back even stronger. Practice is the key to success.");
-	        } else if (correct==8 || correct==9) {
-	            remark.setText("Congratulations! Its your hardwork and determination which helped you to score good marks. Check you results here.");
-	        } else if (correct==10) {
-	            remark.setText("Congratulations! You have passed the quiz with full marks because of your hardwork and dedication towards studies. Keep it up! Check your results here.");
-	        }
-	    }
-=======
 	            remarklabel.setText("Oh no..! You have failed the quiz. Failure is a stepping stone to success. Use this experience as a valuable lesson to improve and do better next time.. Practice daily!.");
 	        } else if (correct>=2 && correct<5) {
 	            remarklabel.setText("Oops..! You have scored less marks. You are capable of great things, and this setback is just a small part of your journey. Keep pushing forward.");
@@ -152,5 +114,4 @@ import java.sql.SQLException;
 	        alert.setContentText(message);
 	        alert.showAndWait();
 	        }
->>>>>>> savin
 	}

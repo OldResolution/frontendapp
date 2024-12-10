@@ -14,11 +14,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 
-<<<<<<< HEAD
-public class CourseController implements Initializable {
-=======
 public class CourseController extends DashboardController{
->>>>>>> savin
     private Stage stage;
     private Scene scene;
 
@@ -34,20 +30,10 @@ public class CourseController extends DashboardController{
     private Button reports;
     @FXML
     private Button LogoutButton;
-<<<<<<< HEAD
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    @FXML
-    void OpenCourses(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("course.fxml"));
-=======
   
     @FXML
     void OpenCourses(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("courses.fxml"));
->>>>>>> savin
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
@@ -100,10 +86,5 @@ public class CourseController extends DashboardController{
                 scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
-<<<<<<< HEAD
-    }
-}
-=======
     } 
     }
->>>>>>> savin

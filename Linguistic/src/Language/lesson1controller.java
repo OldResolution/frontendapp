@@ -1,14 +1,9 @@
 package Language;
 
-<<<<<<< HEAD
-import java.io.IOException;
-import java.net.URL;
-=======
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
->>>>>>> savin
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -28,11 +23,6 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-<<<<<<< HEAD
-
-public class lesson1controller implements Initializable{
-
-=======
 import javafx.util.Duration;
 
 public class lesson1controller implements Initializable{
@@ -47,7 +37,6 @@ public class lesson1controller implements Initializable{
 	private Media media;
 	private MediaPlayer mediaPlayer;
 	
->>>>>>> savin
 	@FXML
 	public TextField pronounce;
 	
@@ -55,14 +44,6 @@ public class lesson1controller implements Initializable{
 	public Label info;
 	
 	@FXML
-<<<<<<< HEAD
-	public ImageView audiocontrol,example;
-	
-	@FXML
-	public Button menu,last,next,english,hindi;
-	
-	static int counter = 1;
-=======
 	public ImageView example;
 	
 	@FXML
@@ -70,26 +51,10 @@ public class lesson1controller implements Initializable{
 	
 	static int counter = 1;
 	
->>>>>>> savin
 	private Stage stage;
 	private Scene scene;
 	
 	@FXML
-<<<<<<< HEAD
-	Image image1 = new Image(getClass().getResourceAsStream("/contents/apple.jpg"));
-	/*Image image2 = new Image(getClass().getResourceAsStream("/contents/fish.jpg"));
-	Image image3 = new Image(getClass().getResourceAsStream("/contents/fish.jpg"));
-	Image image4 = new Image(getClass().getResourceAsStream("/contents/fish.jpg"));
-	Image image5 = new Image(getClass().getResourceAsStream("/contents/fish.jpg"));
-	*/
-
-	
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-	start();
-	english();
-	hindi();
-=======
 	Image image1 = new Image(getClass().getResourceAsStream("/contents/Apple.jpg"));
 	Image image2 = new Image(getClass().getResourceAsStream("/contents/Ball.jpg"));
 	Image image3 = new Image(getClass().getResourceAsStream("/contents/Cat.jpg"));
@@ -138,7 +103,6 @@ public class lesson1controller implements Initializable{
 	public void playAudio() {
 		mediaPlayer.play();
 		mediaPlayer.seek(Duration.seconds(0));
->>>>>>> savin
 	}
 	public void start(){
 	 switch (counter) {
@@ -148,17 +112,6 @@ public class lesson1controller implements Initializable{
 		 break;
 	 case 2:
 		 pronounce.setText("B - बी (bee)");
-<<<<<<< HEAD
-		 break;
-	 case 3:
-		 pronounce.setText("C - सी (cee)");
-		 break;
-	 case 4:
-		 pronounce.setText("D - डी (dee)");
-		 break;
-	 case 5:
-		 pronounce.setText("E - ई (ee)");
-=======
 		 example.setImage(image2);
 		 break;
 	 case 3:
@@ -256,16 +209,11 @@ public class lesson1controller implements Initializable{
 	 case 26:
 		 pronounce.setText("Z - जेड (zed)");
 		 example.setImage(image26);
->>>>>>> savin
 		 break;
 	 }
 }
 public void next(ActionEvent event) {
-<<<<<<< HEAD
-if (counter==5) {
-=======
 if (counter==26) {
->>>>>>> savin
 	try {
 		 Stage thisstage = (Stage) ((Button) event.getSource()).getScene().getWindow();
            thisstage.close();
@@ -281,8 +229,6 @@ if (counter==26) {
 	}
 }else {
 	counter++;
-<<<<<<< HEAD
-=======
 	if (AlfaNumber < songs.size()+1) {
 		
 		AlfaNumber++;
@@ -299,7 +245,6 @@ if (counter==26) {
 			media = new Media(songs.get(AlfaNumber).toURI().toString());
 			mediaPlayer= new MediaPlayer(media);
 	}
->>>>>>> savin
 	start();
 	english();
 	hindi();
@@ -319,11 +264,6 @@ if (counter==1) {
            quizstage.show();
 		}catch(IOException e) {
            e.printStackTrace();
-<<<<<<< HEAD
-	}
-}else {
-	counter--;
-=======
 		}
 	}else {
 	counter--;
@@ -342,7 +282,6 @@ if (counter==1) {
 			media = new Media(songs.get(AlfaNumber).toURI().toString());
 			mediaPlayer= new MediaPlayer(media);
 	}
->>>>>>> savin
 	start();
 	english();
 	hindi();
@@ -350,10 +289,7 @@ if (counter==1) {
 }
 	@FXML
 	void getback(ActionEvent event) throws IOException{
-<<<<<<< HEAD
-=======
 	counter=0;
->>>>>>> savin
 	Parent root = FXMLLoader.load(getClass().getResource("lesson.fxml"));
 	stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 	scene = new Scene(root);
@@ -364,10 +300,6 @@ public void english() {
 	switch (counter) {
 	 case 1:
 		 info.setText("Position in Alphabet: 1st. \n Phonetic Pronunciation: /eɪ/");
-<<<<<<< HEAD
-		 
-=======
->>>>>>> savin
 		 break;
 	 case 2:
 		 info.setText("Position in Alphabet: 2nd. \t Phonetic Pronunciation: /bi/");
@@ -381,8 +313,6 @@ public void english() {
 	 case 5:
 		 info.setText("Position in Alphabet: 5th. \t Phonetic Pronunciation: /i/");
 		 break;
-<<<<<<< HEAD
-=======
 	 case 6:
 		 info.setText("Position in Alphabet: 6th. \n Phonetic Pronunciation: /ɛf/");
 		 break;
@@ -446,7 +376,6 @@ public void english() {
 	case 26:
 		 info.setText("Position in Alphabet: 26th. \t Phonetic Pronunciation: /zɛd/");
 		 break;
->>>>>>> savin
 	 }
 }
 public void hindi() {
@@ -466,10 +395,6 @@ public void hindi() {
 	 case 5:
 		 info.setText("वर्णमाला में स्थान: पाँचवा | \t ध्वनिक उच्चारण: /ई/");
 		 break;
-<<<<<<< HEAD
-	 }
-}
-=======
 	 case 6:
 		 info.setText("वर्णमाला में स्थान: छठा | \t ध्वनिक उच्चारण: /एफ/");
 		 break;
@@ -535,5 +460,4 @@ public void hindi() {
 		 break;
 	 }
 	}
->>>>>>> savin
 }

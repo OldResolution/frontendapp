@@ -2,13 +2,10 @@ package Language;
 
 import java.io.IOException;
 import java.net.URL;
-<<<<<<< HEAD
-=======
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
->>>>>>> savin
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -18,21 +15,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-<<<<<<< HEAD
-=======
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
->>>>>>> savin
 import javafx.stage.Stage;
 
 public class ReportController implements Initializable{
 	 private Stage stage;
-<<<<<<< HEAD
-	    private Scene scene;
-	@Override
-=======
 	 private Scene scene;
 	
 	 @FXML
@@ -43,7 +33,6 @@ public class ReportController implements Initializable{
 	 Button goback,submit,signout;
 	 
 	 @Override
->>>>>>> savin
 	public void initialize(URL location, ResourceBundle resources) {
 		
 	}
@@ -57,11 +46,7 @@ public class ReportController implements Initializable{
     }
     @FXML
     void OpenCourses(ActionEvent event) throws IOException {
-<<<<<<< HEAD
-        Parent root = FXMLLoader.load(getClass().getResource("course.fxml"));
-=======
         Parent root = FXMLLoader.load(getClass().getResource("courses.fxml"));
->>>>>>> savin
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
@@ -91,10 +76,6 @@ public class ReportController implements Initializable{
                 scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
-<<<<<<< HEAD
-    }
-}
-=======
  }
 	public void Feedback(ActionEvent event) {
 		String feedback = comment.getText();
@@ -131,5 +112,4 @@ public class ReportController implements Initializable{
 	        alert.showAndWait();
 	        }
 	}
->>>>>>> savin
 
